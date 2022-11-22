@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Color backgroundColor = Color(0xFFE5E5E5);
-Color whiteColor = Color(0xFFFFFFFF);
-Color blackColor = Color(0xFF2D2D2D);
-Color blackColor2 = Color(0xFF000000);
-Color greyColor = Color(0xFFBDBDBD);
-Color greyColorSearchField = Color(0xFFF8F8F8);
-Color greenColor = Color(0xFF098B5C);
-Color greyColorRecentBook = Color(0xFFAFAFAF);
-Color borderColorRecentBook = Color(0xFFF3F3F3);
-Color greyColorInfo = Color(0xFFF7F7F7);
-Color dividerColor = Color(0xFF6B6B6B);
+Color backgroundColor = const Color(0xFFE5E5E5);
+Color whiteColor = const Color(0xFFFFFFFF);
+Color blackColor = const Color(0xFF2D2D2D);
+Color blackColor2 = const Color(0xFF000000);
+Color greyColor = const Color(0xFFBDBDBD);
+Color greyColorSearchField = const Color(0xFFF8F8F8);
+Color greenColor = const Color(0xFF098B5C);
+Color greyColorRecentBook = const Color(0xFFAFAFAF);
+Color borderColorRecentBook = const Color(0xFFF3F3F3);
+Color greyColorInfo = const Color(0xFFF7F7F7);
+Color dividerColor = const Color(0xFF6B6B6B);
 Color transParentColor = Colors.transparent;
 
 // SEMIBOLD TEXT

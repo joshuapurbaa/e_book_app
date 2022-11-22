@@ -29,7 +29,7 @@ class TrendingBook extends StatelessWidget {
             child: Container(
               height: 160,
               width: 110,
-              margin: EdgeInsets.only(top: 12, right: 20),
+              margin: const EdgeInsets.only(top: 12, right: 20),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
@@ -39,7 +39,7 @@ class TrendingBook extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Text(
           info.writers,
           style: mediumText12.copyWith(color: greyColor),

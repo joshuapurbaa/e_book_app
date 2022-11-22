@@ -4,7 +4,7 @@ import 'package:e_book_app/screens/home/pages/book_details.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
       title: 'E-book App',
       debugShowCheckedModeBanner: false,
       routes: {
-        BottomNavBar.nameRoute: (context) => BottomNavBar(),
-        HomePage.nameRoute: (context) => HomePage(),
-        BookDetail.nameRoute: (context) => BookDetail(),
+        BottomNavBar.nameRoute: (context) => const BottomNavBar(),
+        HomePage.nameRoute: (context) => const HomePage(),
+        BookDetail.nameRoute: (context) => const BookDetail(),
       },
     );
   }

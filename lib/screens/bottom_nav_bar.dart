@@ -10,17 +10,17 @@ class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
 
   @override
-  _BottomNavBarState createState() => _BottomNavBarState();
+  State<BottomNavBar> createState() => _BottomNavBarState();
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
 
   final _screens = [
-    HomePage(),
-    SavePage(),
-    CartPage(),
-    UserPage(),
+    const HomePage(),
+    const SavePage(),
+    const CartPage(),
+    const UserPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         items: [
           BottomNavigationBarItem(
             icon: Container(
-              margin: EdgeInsets.only(top: 15),
+              margin: const EdgeInsets.only(top: 15),
               child: Image.asset(
                 'assets/icons/icon-home.png',
                 width: 20,
@@ -47,7 +47,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           BottomNavigationBarItem(
             icon: Container(
-              margin: EdgeInsets.only(top: 15),
+              margin: const EdgeInsets.only(top: 15),
               child: Image.asset(
                 'assets/icons/icon-save-nav.png',
                 width: 14,
@@ -58,7 +58,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           BottomNavigationBarItem(
             icon: Container(
-              margin: EdgeInsets.only(top: 15),
+              margin: const EdgeInsets.only(top: 15),
               child: Image.asset(
                 'assets/icons/icon-cart.png',
                 width: 20,
@@ -69,7 +69,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           BottomNavigationBarItem(
             icon: Container(
-              margin: EdgeInsets.only(top: 15),
+              margin: const EdgeInsets.only(top: 15),
               child: Image.asset(
                 'assets/icons/icon-user.png',
                 width: 18,

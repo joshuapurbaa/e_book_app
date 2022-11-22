@@ -9,11 +9,11 @@ class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  List<String> _categories = [
+  final List<String> _categories = [
     'All Books',
     'Comic',
     'Novel',
@@ -26,20 +26,20 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Widget header() {
       return Container(
-        margin: EdgeInsets.symmetric(horizontal: 30),
+        margin: const EdgeInsets.symmetric(horizontal: 30),
         child: Row(
           children: [
             Container(
               width: 50,
               height: 50,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
                   image: AssetImage('assets/images/profile-pic.png'),
                 ),
               ),
             ),
-            SizedBox(width: 8),
+            const SizedBox(width: 8),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Image.asset(
               'assets/icons/icon-menu.png',
               width: 18,
@@ -65,28 +65,28 @@ class _HomePageState extends State<HomePage> {
 
     Widget searchField() {
       return Container(
-        margin: EdgeInsets.symmetric(horizontal: 30),
+        margin: const EdgeInsets.symmetric(horizontal: 30),
         child: TextField(
           decoration: InputDecoration(
             hintText: 'Find Your Favorite Book',
             hintStyle: mediumText12.copyWith(color: greyColor),
             fillColor: greyColorSearchField,
             filled: true,
-            border: OutlineInputBorder(
+            border: const OutlineInputBorder(
               borderSide: BorderSide.none,
               borderRadius: BorderRadius.all(
                 Radius.circular(12),
               ),
             ),
             isCollapsed: true,
-            contentPadding: EdgeInsets.all(18),
+            contentPadding: const EdgeInsets.all(18),
             suffixIcon: InkWell(
               onTap: () {},
               child: Container(
-                padding: EdgeInsets.all(15),
+                padding: const EdgeInsets.all(15),
                 decoration: BoxDecoration(
                   color: greenColor,
-                  borderRadius: BorderRadius.all(
+                  borderRadius: const BorderRadius.all(
                     Radius.circular(12),
                   ),
                 ),
@@ -104,9 +104,9 @@ class _HomePageState extends State<HomePage> {
     Widget recentBook() {
       return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        padding: EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Row(
-          children: [
+          children: const [
             RecentBook(
               image: 'assets/images/recentbook_1.png',
               title: 'The Magic',
@@ -129,8 +129,8 @@ class _HomePageState extends State<HomePage> {
           });
         },
         child: Container(
-          margin: EdgeInsets.only(top: 30, right: 12),
-          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+          margin: const EdgeInsets.only(top: 30, right: 12),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
           decoration: BoxDecoration(
             color: _isSelected == index ? greenColor : transParentColor,
             borderRadius: BorderRadius.circular(6),
@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage> {
 
     Widget listCategories() {
       return SingleChildScrollView(
-        padding: EdgeInsets.only(left: 30),
+        padding: const EdgeInsets.only(left: 30),
         scrollDirection: Axis.horizontal,
         child: Row(
           children: _categories
@@ -161,7 +161,7 @@ class _HomePageState extends State<HomePage> {
     Widget trendingBook() {
       return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        padding: EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Row(
           children: bookLists
               .asMap()
@@ -181,10 +181,10 @@ class _HomePageState extends State<HomePage> {
       body: ListView(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(vertical: 30),
+            padding: const EdgeInsets.symmetric(vertical: 30),
             decoration: BoxDecoration(
               color: whiteColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(30),
               ),
             ),
@@ -192,9 +192,9 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 header(),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 searchField(),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Text(
@@ -202,7 +202,7 @@ class _HomePageState extends State<HomePage> {
                     style: semiBoldText16.copyWith(color: blackColor),
                   ),
                 ),
-                SizedBox(height: 12),
+                const SizedBox(height: 12),
                 recentBook(),
               ],
             ),
@@ -216,7 +216,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           trendingBook(),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
         ],
       ),
     );

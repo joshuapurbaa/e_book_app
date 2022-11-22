@@ -16,10 +16,10 @@ class RecentBook extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 150,
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         border: Border.all(color: borderColorRecentBook),
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(12),
         ),
       ),
@@ -29,7 +29,7 @@ class RecentBook extends StatelessWidget {
             image,
             width: 90,
           ),
-          SizedBox(width: 18),
+          const SizedBox(width: 18),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
